@@ -1,0 +1,49 @@
+{
+    "name": "onursimsek/lara-subs",
+    "description": "CLI application that finds subtitles for movies and tv-series.",
+    "keywords": [
+        "subtitle",
+        "opensubtitle",
+        "movie",
+        "tv-series",
+        "cli",
+        "console"
+    ],
+    "homepage": "https://github.com/onursimsek/lara-subs",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Onur Şimşek",
+            "email": "posta@onursimsek.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "laravel-zero/framework": "^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.2",
+        "pestphp/pest": "^0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": [
+        "lara-subs"
+    ]
+}
