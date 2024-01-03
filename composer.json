@@ -19,12 +19,16 @@
         }
     ],
     "require": {
-        "php": "^7.3",
-        "laravel-zero/framework": "^8.0"
+        "php": "^8.1",
+        "laravel-zero/framework": "^10.2",
+        "laravel/prompts": "^0.1.14",
+        "nunomaduro/termwind": "^1.15.1",
+        "onursimsek/opensubtitles-api": "^2.0"
     },
     "require-dev": {
-        "mockery/mockery": "^1.4.2",
-        "pestphp/pest": "^0.3"
+        "laravel/pint": "^1.13",
+        "mockery/mockery": "^1.6",
+        "pestphp/pest": "^2.22"
     },
     "autoload": {
         "psr-4": {
@@ -39,9 +43,12 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "bin": [
         "lara-subs"
