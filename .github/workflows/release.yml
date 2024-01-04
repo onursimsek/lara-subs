@@ -1,0 +1,38 @@
+name: Subtitle Downloader Builder
+
+on:
+  push:
+    branches: [ master ]
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    name: "Prepare app"
+    runs-on: ubuntu-latest
+    needs: variables
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install PHP and dependencies
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: composer:v2
+
+      - name: Install dependencies
+        shell: bash
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Create build file
+        run: |
+          php lara-subs app:build lara-subs
+
+      - name: Store artifact for distribution
+        uses: actions/upload-artifact@v3
+        with:
+          name: lara-subs
+          path: ./builds/lara-subs
+          if-no-files-found: error
