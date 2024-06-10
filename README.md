@@ -21,8 +21,8 @@ OPENSUBTITLE_PASSWORD=
 To search for subtitles for movies or TV series in a specific directory, use the --path parameter.
 
 ```shell
-lara-subs --path "/Movies/The.Matrix"
-lara-subs --path "/Movies/How.I.Met.Your.Mother"
+lara-subs find --path "/Movies/The.Matrix"
+lara-subs find --path "/Movies/How.I.Met.Your.Mother"
 ```
 ![screenshot.02.png](arts%2Fscreenshot.02.png)
 
@@ -30,8 +30,8 @@ lara-subs --path "/Movies/How.I.Met.Your.Mother"
 Use the --title parameter to search by movie or series title.
 
 ```shell
-lara-subs --title "the natrix"
-lara-subs --title "how i met your mother"
+lara-subs find --title "the natrix"
+lara-subs find --title "how i met your mother"
 ```
 ![screenshot.01.png](arts%2Fscreenshot.01.png)
 
